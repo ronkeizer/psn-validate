@@ -416,7 +416,7 @@ foreach my $hash (@ini_areas) {
 	    unless($psntool eq "execute") {
 		my @csv;
 		my $dir_get = 'raw_results(.)*.csv';
-		unless ($psntool eq "lasso") {
+		unless (exists_in_array($psntool, ["lasso","scm"])) {
 		    if (-e $general{lib_folder}."/".$current{folder}."/".$current{reference}) {
 			@csv = dir ($general{lib_folder}."/".$current{folder}."/".$current{reference}, $dir_get);
 		    }
@@ -430,10 +430,12 @@ foreach my $hash (@ini_areas) {
 			next;
 		    }
 		    if (-e $general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$psntool."_results.csv") {
-			copy ($general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$psntool."_results.csv",
+				copy ($general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$psntool."_results.csv",
 			      $run_folder."/".$psntool."_results_ref.csv");
 		    } else {
-			print "*** Error: reference results file (".$current{reference}."/".$psntool."_results.csv) not found!!!\nStopping this test.\n\n";
+				print "*** Error: reference results file (".$current{reference}."/".$psntool."_results.csv) not found!!!\nStopping this test.\n\n";
+		    	$failed++;
+				next;
 		    }
 		}
 		if ($psntool eq "scm") {
@@ -500,11 +502,13 @@ foreach my $hash (@ini_areas) {
 	    if ($current{clean} ne "") {
 		$comm .= "-clean=".$current{clean}." ";
 	    }
-	    if ($current{lst} ne "") {
-		$comm .= "-lst=".$current{lst}." ";
-	    }
-	    if ($current{lst_file} ne "") {
-		$comm .= "-lst_file=".$current{lst_file}." ";
+	    unless (exists_in_array($psntool, ["bootstrap"])) {
+		    if ($current{lst} ne "") {
+				$comm .= "-lst=".$current{lst}." ";
+	    	}
+		    if ($current{lst_file} ne "") {
+				$comm .= "-lst_file=".$current{lst_file}." ";
+	    	}
 	    }
 	    if ($current{seed} ne "") {
 		$comm .= "-seed=".$current{seed}." ";
