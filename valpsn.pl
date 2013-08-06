@@ -79,6 +79,7 @@ if ($^O ne "linux") {
 my %args;
 my @possible_args = ("ini", "force_run_psn", "force_run_test", "report",
 		     "h", "help", "force", "run_only");
+my @res_ext = ("lst", "res");
 my @not_recognized;
 foreach my $arg (@ARGV) {
     if (substr($arg, 0, 1) eq "-") {
@@ -274,7 +275,8 @@ if (-e $report) {
 }
 
 ## Log all screen output to file
-open (STDOUT, "| tee -ai ".$report);
+print $report;
+open (STDOUT, "2>&1 | tee -ai ".$report);
 
 ## Start
 print "\n------------------------------------------------------------------------------\n";
@@ -385,57 +387,68 @@ foreach my $hash (@ini_areas) {
 	    ## Always try to copy lst-file: this is needed for e.g. bootstrap/vpc to ensure the seed option is working
 	    my $lst_found = 0;
 	    if ($psntool eq "execute") {
-		if (-e $general{lib_folder}."/".$current{folder}."/".$current{reference}) {
-		    copy ($general{lib_folder}."/".$current{folder}."/".$current{reference}, $run_folder."/".$current{reference}.".ref");
-		    $lst_found = 1;
-		}
-		if ($lst_found == 0) {
-		    print "*** Error: reference output file (".$current{reference}.") not found!!!\nStopping this test.\n\n";
-		    push (@failed_tests, $i.": ".$psntool. " (reference output not found)");
-		    $failed++;
-		    next;
-		}
+	    	if (-e $general{lib_folder}."/".$current{folder}."/".$current{reference}) {
+	    		copy ($general{lib_folder}."/".$current{folder}."/".$current{reference}, $run_folder."/".$current{reference}.".ref");
+	    		$lst_found = 1;
+	    	}
+	    	if ($lst_found == 0) {
+	    		print "*** Error: reference output file (".$current{reference}.") not found!!!\nStopping this test.\n\n";
+	    		push (@failed_tests, $i.": ".$psntool. " (reference output not found)");
+	    		$failed++;
+	    		next;
+	    	}
 	    } else {
-		if ($current{lst} ne "") {
-		    if (-e $general{lib_folder}."/".$current{folder}."/".$current{lst}) {
-			copy ($general{lib_folder}."/".$current{folder}."/".$current{lst}, $run_folder."/".$current{lst});
-			$lst_found = 1;
-		    }
-		    if ($lst_found == 0) {
-			print "*** Error: specified lst-file (".$current{reference}.") not found!!!\nStopping this test.\n\n";
-			push (@failed_tests, $i.": ".$psntool. " (lst-file not found)");
-			$failed++;
-			next;
-		    }
-		}
-		if (($lst_found == 0)&&($current{seed} ne "")) {
-		    print "*** Warning: The -seed option was specified, but the lst-file was not found.\n".
-			"This could potentially invalidate the -seed option, e.g. for bootstrap / vpc etc.\n\n";
-		}
+	    	my $lst = "";
+    		foreach my $res (@res_ext) {
+	    		if (-e $general{lib_folder}."/".$current{folder}."/".$mod_no_ext.".".$res) {
+		    		copy ($general{lib_folder}."/".$current{folder}."/".$mod_no_ext.".".$res, $run_folder."/".$current{model}.".".$res);
+    				$lst_found = 1;
+    				$lst = $general{lib_folder}."/".$current{folder}."/".$mod_no_ext.".".$res;
+    			}
+    		}
+	    	if ($current{lst} ne "") {
+	   			if (-e $general{lib_folder}."/".$current{folder}."/".$current{lst}) {
+	    			copy ($general{lib_folder}."/".$current{folder}."/".$current{lst}, $run_folder."/".$current{lst});
+	    			$lst_found = 1;
+    				$lst = $general{lib_folder}."/".$current{folder}."/".$current{lst};
+	    		}
+	    	}	 
+   			if ($lst_found == 0) {
+   				print "*** Error: specified lst-file (".$lst.") not found!!!\nStopping this test.\n\n";
+   				push (@failed_tests, $i.": ".$psntool. " (lst-file not found)");
+    			$failed++;
+    			next;
+   			}
+	    	if (($lst_found == 0)&&($current{seed} ne "")) {
+	    		print "*** Warning: The seed option was specified, but the lst-file was not found.\n".
+	    		"This could potentially invalidate the -seed option, e.g. for bootstrap / vpc etc.\n\n";
+	    	}
 	    }
 	    unless($psntool eq "execute") {
 		my @csv;
 		my $dir_get = 'raw_results(.)*.csv';
-		unless (exists_in_array($psntool, ["lasso","scm"])) {
+		unless (exists_in_array($psntool, ["lasso"])) {
 		    if (-e $general{lib_folder}."/".$current{folder}."/".$current{reference}) {
-			@csv = dir ($general{lib_folder}."/".$current{folder}."/".$current{reference}, $dir_get);
+				@csv = dir ($general{lib_folder}."/".$current{folder}."/".$current{reference}, $dir_get);
 		    }
 		    if (@csv > 0) {
-			my $raw_res = shift(@csv);
-			copy ($general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$raw_res, $run_folder."/raw_results_ref.csv");
+				my $raw_res = shift(@csv);
+				copy ($general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$raw_res, $run_folder."/raw_results_ref.csv");
 		    } else {
-			print "*** Error: reference output file (".$current{reference}.") not found!!!\nStopping this test.\n\n";
-			push (@failed_tests, $i.": ".$psntool. " (reference output not found)");
-			$failed++;
-			next;
-		    }
-		    if (-e $general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$psntool."_results.csv") {
-				copy ($general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$psntool."_results.csv",
-			      $run_folder."/".$psntool."_results_ref.csv");
-		    } else {
-				print "*** Error: reference results file (".$current{reference}."/".$psntool."_results.csv) not found!!!\nStopping this test.\n\n";
-		    	$failed++;
+				print "*** Error: reference output file (".$current{reference}.") not found!!!\nStopping this test.\n\n";
+				push (@failed_tests, $i.": ".$psntool. " (reference output not found)");
+				$failed++;
 				next;
+		    }
+	   		unless (exists_in_array($psntool, ["scm"])) {
+			    if (-e $general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$psntool."_results.csv") {
+					copy ($general{lib_folder}."/".$current{folder}."/".$current{reference}."/".$psntool."_results.csv",
+				      $run_folder."/".$psntool."_results_ref.csv");
+		    	} else {
+					print "*** Error: reference results file (".$current{reference}."/".$psntool."_results.csv) not found!!!\nStopping this test.\n\n";
+		    		$failed++;
+					next;
+		    	}
 		    }
 		}
 		if ($psntool eq "scm") {
@@ -537,77 +550,78 @@ foreach my $hash (@ini_areas) {
 		    push (@failed_tests, $i.": ".$psntool. " (-relations argument not supplied)");
 		}
 	    }
+	    if ($psntool eq "scm") {
+			unless ($current{model} eq "") {
+		    	$comm .= "-model=".$current{model};
+			}
+	    } else {
+			$comm .= $current{model};
+	    }
 	    # update command;
 	    if ($current{command_explicit} ne "") {
-		$comm = $current{command_explicit};
+			$comm = $current{command_explicit};
 	    }
 	    my $run = 1;
 	    if ($general{run_psn} ne "") {
-		if ($general{run_psn} =~ m/(true|1)/i) {
-		    $run = 1;
-		}
-		if ($general{run_psn} =~ m/(false|0)/i) {
-		    $run = 0;
-		}
+			if ($general{run_psn} =~ m/(true|1)/i) {
+			    $run = 1;
+			}
+			if ($general{run_psn} =~ m/(false|0)/i) {
+			    $run = 0;
+			}
 	    }
 	    if ($current{run_psn} ne "") {
-		if ($current{run_psn} =~ m/(true|1)/i) {
-		    $run = 1;
-		}
-		if ($current{run_psn} =~ m/(false|0)/i) {
-		    $run = 0;
-		}
+			if ($current{run_psn} =~ m/(true|1)/i) {
+		 	   $run = 1;
+			}
+			if ($current{run_psn} =~ m/(false|0)/i) {
+		    	$run = 0;
+			}
 	    }
-	    if ($psntool eq "scm") {
-		unless ($current{model} eq "") {
-		    $comm .= "-model=".$current{model};
-		}
-	    } else {
-		$comm .= $current{model};
-	    }
+	    $comm .= " 2>&1 ";
 	    if ($current{verbose_level} < 3) {
-		$comm .= " > run.log";
+			$comm .= " > run.log";
 	    }
 	    if ($run) {
-		print $i."b. Running command: '".$comm."'\n\n";
-		chdir($run_folder);
-		rmtree ($psntool."_test_dir");
-		system ($comm);
-		chdir($cwd);
+			print $i."b. Running command: '".$comm."'\n\n";
+			chdir($run_folder);
+			rmtree ($psntool."_test_dir");
+			system ($comm);
+			chdir($cwd);
 	    }
 
 	    ## Run sumo on output if it was an execute command
 	    if ($psntool eq "execute") {
-		chdir($run_folder);
-		my $comm = "sumo ".$current{nm_output};
-		if ($current{verbose_level} == 2) {
-		    print "\Test sumo output: '".$comm."'\n\n";
-		    system ($comm);
-		}
-		print "\nSaving sumo output to ".$current{nm_output}.".csv \n";
-		my $comm = "sumo -csv ".$current{nm_output}." > ".$current{nm_output}.".csv";
-		system ($comm);
+			chdir($run_folder);
+			my $comm = "sumo ".$current{nm_output};
+			if ($current{verbose_level} == 2) {
+			   print "\Test sumo output: '".$comm."'\n\n";
+		 	   system ($comm);
+			}
+			print "\nSaving sumo output to ".$current{nm_output}.".csv \n";
+			my $comm = "sumo -csv ".$current{nm_output}." 2>&1 > ".$current{nm_output}.".csv";
+			system ($comm);
 
-		## reference
-		my $comm = "sumo ".$current{reference}.".ref";
-		if ($current{verbose_level} == 2) {
-		    print "\nReference sumo output: '".$comm."'\n\n";
-		    system ($comm);
-		}
-		print "\nSaving reference sumo output to ".$current{reference}."_ref.csv \n";
-		my $comm = "sumo -csv ".$current{reference}.".ref > ".$current{reference}."_ref.csv";
-		system ($comm);
-		chdir($cwd);
+			## reference
+			my $comm = "sumo ".$current{reference}.".ref";
+			if ($current{verbose_level} == 2) {
+		    	print "\nReference sumo output: '".$comm."'\n\n";
+		   		system ($comm);
+			}
+			print "\nSaving reference sumo output to ".$current{reference}."_ref.csv \n";
+			my $comm = "sumo -csv ".$current{reference}.".ref 2>&1 > ".$current{reference}."_ref.csv";
+			system ($comm);
+			chdir($cwd);
 	    }
 
 	    my $test = $general{run_test};
 	    if ($current{run_test} ne "") {
-		if ($current{run_test} =~ m/(true|1)/i) {
-		    $test = 1;
-		}
-		if ($current{run_test} =~ m/(false|0)/i) {
-		    $test = 0;
-		}
+			if ($current{run_test} =~ m/(true|1)/i) {
+		   	 	$test = 1;
+			}
+			if ($current{run_test} =~ m/(false|0)/i) {
+		    	$test = 0;
+			}
 	    }
 
 	    if ($test) {
@@ -625,7 +639,11 @@ foreach my $hash (@ini_areas) {
 		my $j = 1;
 		my @keys = sort {lc($a) cmp lc($b)} keys(%current);
 		foreach my $key (@keys) {
-		    $hash_list .= "  ".$key.' = "'.$current{$key}.'"';
+			if (exists_in_array($key, ["tolerance", "ofv_abs_tol"])) {	
+	 		    $hash_list .= "  ".$key.' = '.$current{$key};
+			} else {
+	 		    $hash_list .= "  ".$key.' = "'.$current{$key}.'"';
+			}
 		    unless ($j == int(keys(%current))) {
 			$hash_list .= ","
 		    }

@@ -12449,3 +12449,2076 @@ Summary: Succes (0/11), failed (1/11), not tested (0/11)
 Failed tests: 9: scm (PsN output folder not found)
 -------------------------------------------------------------------------------
 
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+6
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * model: run4.mod
+ * folder: examples1
+ * reference: vpc_dir1
+ * seed: 12345
+ * lst: run4.lst
+ * samples: 500
+ * tolerance: 0.05
+ * extra_arguments: -bin_by_count -no_of_bins=8 -dv=CP
+ * run_psn: 1
+ * run_test: 1
+ * test_obs_median: 1
+ * test_obs_5: 1
+ * test_obs_95: 1
+ * test_pi_median: 1
+ * test_pi_median_ci: 0
+ * test_pi_95: 1
+ * test_pi_5: 1
+
+6a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc)
+
+6b. Running command: 'vpc -bin_by_count -no_of_bins=8 -dv=CP -dir=vpc_test_dir -nm_version=default -threads=5 -clean=2 -lst=run4.lst -seed=12345 -samples=500 run4.mod > run.log'
+
+6c. Comparing output
+
+Running R-script: test6_vpc.R 
+Output from R: 
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (0/11), failed (1/11), not tested (0/11)
+Failed tests: 6: vpc (comparison with reference failed)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+6
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * model: run4.mod
+ * folder: examples1
+ * reference: vpc_dir1
+ * seed: 12345
+ * samples: 500
+ * tolerance: 0.05
+ * extra_arguments: -bin_by_count -no_of_bins=8 -dv=CP
+ * run_psn: 1
+ * run_test: 1
+ * test_obs_median: 1
+ * test_obs_5: 1
+ * test_obs_95: 1
+ * test_pi_median: 1
+ * test_pi_median_ci: 0
+ * test_pi_95: 1
+ * test_pi_5: 1
+
+6a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc)
+
+*** Warning: The -seed option was specified, but the lst-file was not found.
+This could potentially invalidate the -seed option, e.g. for bootstrap / vpc etc.
+
+6b. Running command: 'vpc -bin_by_count -no_of_bins=8 -dv=CP -dir=vpc_test_dir -nm_version=default -threads=5 -clean=2 -seed=12345 -samples=500 run4.mod > run.log'
+
+6c. Comparing output
+
+Running R-script: test6_vpc.R 
+Output from R: 
+  OVERALL TEST RESULT: SUCCESS
+
+Log file: /Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc/test6_vpc.log
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (1/11), failed (0/11), not tested (0/11)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+6
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * model: run4.mod
+ * folder: examples1
+ * reference: vpc_dir1
+ * seed: 12345
+ * samples: 500
+ * tolerance: 0.05
+ * extra_arguments: -bin_by_count -no_of_bins=8 -dv=CP
+ * run_psn: 1
+ * run_test: 1
+ * test_obs_median: 1
+ * test_obs_5: 1
+ * test_obs_95: 1
+ * test_pi_median: 1
+ * test_pi_median_ci: 0
+ * test_pi_95: 1
+ * test_pi_5: 1
+
+6a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc)
+
+*** Warning: The -seed option was specified, but the lst-file was not found.
+This could potentially invalidate the -seed option, e.g. for bootstrap / vpc etc.
+
+6b. Running command: 'vpc -bin_by_count -no_of_bins=8 -dv=CP -dir=vpc_test_dir -nm_version=default -threads=5 -clean=2 -seed=12345 -samples=500 run4.mod > run.log'
+
+6c. Comparing output
+
+Running R-script: test6_vpc.R 
+Output from R: 
+  OVERALL TEST RESULT: SUCCESS
+
+Log file: /Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc/test6_vpc.log
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (1/11), failed (0/11), not tested (0/11)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+6
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * model: run4.mod
+ * folder: examples1
+ * reference: vpc_dir1
+ * seed: 12345
+ * samples: 500
+ * tolerance: 0.05
+ * extra_arguments: -bin_by_count -no_of_bins=8 -dv=CP
+ * run_psn: 1
+ * run_test: 1
+ * test_obs_median: 1
+ * test_obs_5: 1
+ * test_obs_95: 1
+ * test_pi_median: 1
+ * test_pi_median_ci: 0
+ * test_pi_95: 1
+ * test_pi_5: 1
+
+6a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc)
+
+*** Error: specified lst-file (vpc_dir1) not found!!!
+Stopping this test.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (0/11), failed (1/11), not tested (0/11)
+Failed tests: 6: vpc (lst-file not found)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+6
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * model: run4.mod
+ * folder: examples1
+ * reference: vpc_dir1
+ * seed: 12345
+ * samples: 500
+ * tolerance: 0.05
+ * extra_arguments: -bin_by_count -no_of_bins=8 -dv=CP
+ * run_psn: 1
+ * run_test: 1
+ * test_obs_median: 1
+ * test_obs_5: 1
+ * test_obs_95: 1
+ * test_pi_median: 1
+ * test_pi_median_ci: 0
+ * test_pi_95: 1
+ * test_pi_5: 1
+
+6a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc)
+
+*** Error: specified lst-file () not found!!!
+Stopping this test.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (0/11), failed (1/11), not tested (0/11)
+Failed tests: 6: vpc (lst-file not found)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+6
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * model: run4.mod
+ * folder: examples1
+ * reference: vpc_dir1
+ * seed: 12345
+ * samples: 500
+ * tolerance: 0.05
+ * extra_arguments: -bin_by_count -no_of_bins=8 -dv=CP
+ * run_psn: 1
+ * run_test: 1
+ * test_obs_median: 1
+ * test_obs_5: 1
+ * test_obs_95: 1
+ * test_pi_median: 1
+ * test_pi_median_ci: 0
+ * test_pi_95: 1
+ * test_pi_5: 1
+
+6a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc)
+
+6b. Running command: 'vpc -bin_by_count -no_of_bins=8 -dv=CP -dir=vpc_test_dir -nm_version=default -threads=5 -clean=2 -seed=12345 -samples=500 run4.mod > run.log'
+
+6c. Comparing output
+
+Running R-script: test6_vpc.R 
+Output from R: 
+  TEST SUCCESS: test_pi_median COMPARISON
+  TEST SUCCESS: test_obs_median COMPARISON
+  TEST SUCCESS: test_obs_5 COMPARISON
+  TEST SUCCESS: test_obs_95 COMPARISON
+  TEST SUCCESS: test_pi_5 COMPARISON
+  TEST SUCCESS: test_pi_95 COMPARISON
+  OVERALL TEST RESULT: SUCCESS
+
+Log file: /Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test6_vpc/test6_vpc.log
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (1/11), failed (0/11), not tested (0/11)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+9
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * run_psn: 1
+ * run_test: 1
+ * folder: examples2
+ * model: run4.mod
+ * extra_files: psp.scm
+ * extra_arguments: -config_file=psp.scm
+ * reference: scm_run5
+ * ofv_abs_tol: 1
+ * test_ofv_final_model: 1
+ * test_final_model_same: 1
+
+9a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test9_scm)
+
+9b. Running command: 'scm -config_file=psp.scm -dir=scm_test_dir -nm_version=default -threads=5 -clean=2 -model=run4.mod > run.log'
+
+9c. Comparing output
+
+Running R-script: test9_scm.R 
+Output from R: 
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (0/11), failed (1/11), not tested (0/11)
+Failed tests: 9: scm (comparison with reference failed)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+9
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * folder: examples2
+ * model: run4.mod
+ * extra_files: psp.scm
+ * extra_arguments: -config_file=psp.scm
+ * reference: scm_run5
+ * ofv_abs_tol: 1
+ * test_ofv_final_model: 1
+ * test_final_model_same: 1
+
+9a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test9_scm)
+
+9b. Running command: 'scm -config_file=psp.scm -dir=scm_test_dir -nm_version=default -threads=5 -clean=2 -model=run4.mod > run.log'
+
+9c. Comparing output
+
+Running R-script: test9_scm.R 
+Output from R: 
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (0/11), failed (1/11), not tested (0/11)
+Failed tests: 9: scm (comparison with reference failed)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+9
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * folder: examples2
+ * model: run4.mod
+ * extra_files: psp1.scm
+ * extra_arguments: -config_file=psp.scm
+ * reference: scm_run5
+ * ofv_abs_tol: 1
+ * test_ofv_final_model: 1
+ * test_final_model_same: 1
+
+9a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test9_scm)
+
+*** Error: raw_results file not found!!!
+Stopping this test.
+
+9b. Running command: 'scm -config_file=psp.scm -dir=scm_test_dir -nm_version=default -threads=5 -clean=2 -model=run4.mod > run.log'
+
+9c. Comparing output
+
+Running R-script: test9_scm.R 
+Output from R: 
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (0/11), failed (2/11), not tested (0/11)
+Failed tests: 9: scm (raw_results file not found)
+              9: scm (comparison with reference failed)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+9
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * folder: examples2
+ * model: run4.mod
+ * extra_files: psp1.scm
+ * extra_arguments: -config_file=psp1.scm
+ * reference: scm_run5
+ * ofv_abs_tol: 1
+ * test_ofv_final_model: 1
+ * test_final_model_same: 1
+
+9a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test9_scm)
+
+*** Error: raw_results file not found!!!
+Stopping this test.
+
+9b. Running command: 'scm -config_file=psp1.scm -dir=scm_test_dir -nm_version=default -threads=5 -clean=2 -model=run4.mod > run.log'
+
+*** Error: PsN output folder not found!!!
+Stopping this test.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (0/11), failed (2/11), not tested (0/11)
+Failed tests: 9: scm (raw_results file not found)
+              9: scm (PsN output folder not found)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+9
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * folder: examples2
+ * model: run4.mod
+ * extra_files: psp1.scm
+ * extra_arguments: -config_file=psp1.scm
+ * reference: scm_run5
+ * ofv_abs_tol: 1
+ * test_ofv_final_model: 1
+ * test_final_model_same: 1
+
+9a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test9_scm)
+
+*** Error: raw_results file not found!!!
+Stopping this test.
+
+9b. Running command: 'scm -config_file=psp1.scm -dir=scm_test_dir -nm_version=default -threads=5 -clean=2 -model=run4.mod > run.log'
+
+*** Error: PsN output folder not found!!!
+Stopping this test.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (0/11), failed (2/11), not tested (0/11)
+Failed tests: 9: scm (raw_results file not found)
+              9: scm (PsN output folder not found)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+9
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * folder: examples2
+ * model: run4.mod
+ * extra_files: psp.scm
+ * extra_arguments: -config_file=psp.scm
+ * reference: scm_run5
+ * ofv_abs_tol: 1
+ * test_ofv_final_model: 1
+ * test_final_model_same: 1
+
+9a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test9_scm)
+
+9b. Running command: 'scm -config_file=psp.scm -dir=scm_test_dir -nm_version=default -threads=5 -clean=2 -model=run4.mod > run.log'
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+1
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * folder: examples1
+ * model: run4.mod
+ * reference: run4.lst
+ * nm_version: default
+ * extra_files: 
+ * extra_arguments: 
+ * R_script: execute.R
+ * command_explicit: 
+ * ofv_abs_tol: 1
+ * run_psn: 1
+ * run_test: 1
+ * test_ofv: TRUE
+ * test_parameters: TRUE
+
+1a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test1_execute)
+
+1b. Running command: 'execute  -dir=execute_test_dir -nm_version=default -threads=5 -clean=2 run4.mod > run.log'
+
+Test sumo output: 'sumo run4.lst'
+
+-----------------------------------------------------------------------
+
+run4.lst
+
+Successful minimization                                           [    OK   ]   
+No rounding errors                                                [    OK   ]   
+No zero gradients                                                 [    OK   ]   
+No final zero gradients                                           [    OK   ]   
+Hessian not reset                                                 [    OK   ]   
+Parameter(s) near boundary                                        [ WARNING ]   
+	OMEGA(2,2)             0.00024            0
+Covariance step                                                   [  ERROR  ]   
+
+Correlations                                                      [    OK   ]   
+
+Estimation time for subproblem, sum over $EST (seconds):   0.03
+Covariance time for subproblem, sum over $EST (seconds):   0.01
+
+Objective function value: 104.5610
+
+         THETA                             OMEGA                           SIGMA              
+THETA1    2.77  (........)  OMEGA(1,1)     2.356  (........)  SIGMA(1,1)  0.6229  (........)  
+THETA2  0.0781  (........)  OMEGA(2,1)    0.1436  (........)                                  
+THETA3  0.0363  (........)  OMEGA(2,2)   0.01549  (........)                                  
+                            OMEGA(3,1)  -0.07571  (........)                                  
+                            OMEGA(3,2)    0.8194  (........)                                  
+                            OMEGA(3,3)    0.7176  (........)                                  
+
+The relative standard errors for omega and sigma are reported on the approximate
+standard deviation scale (SE/variance estimate)/2.
+-----------------------------------------------------------------------
+
+Saving sumo output to run4.lst.csv 
+
+Reference sumo output: 'sumo run4.lst.ref'
+
+-----------------------------------------------------------------------
+
+run4.lst.ref
+
+Successful minimization                                           [    OK   ]   
+No rounding errors                                                [    OK   ]   
+No zero gradients                                                 [    OK   ]   
+No final zero gradients                                           [    OK   ]   
+Hessian not reset                                                 [    OK   ]   
+Parameter(s) near boundary                                        [ WARNING ]   
+	OMEGA(2,2)             0.00024            0
+Covariance step                                                   [  ERROR  ]   
+
+Correlations                                                      [    OK   ]   
+
+Total run time for model (hours:min:sec):                  0:00:07
+Estimation time for subproblem, sum over $EST (seconds):   0.06
+Covariance time for subproblem, sum over $EST (seconds):   0.03
+
+Objective function value: 104.5610
+
+         THETA                             OMEGA                           SIGMA              
+THETA1    2.77  (........)  OMEGA(1,1)     2.356  (........)  SIGMA(1,1)  0.6229  (........)  
+THETA2  0.0781  (........)  OMEGA(2,1)    0.1436  (........)                                  
+THETA3  0.0363  (........)  OMEGA(2,2)   0.01549  (........)                                  
+                            OMEGA(3,1)  -0.07571  (........)                                  
+                            OMEGA(3,2)    0.8194  (........)                                  
+                            OMEGA(3,3)    0.7176  (........)                                  
+
+The relative standard errors for omega and sigma are reported on the approximate
+standard deviation scale (SE/variance estimate)/2.
+-----------------------------------------------------------------------
+
+Saving reference sumo output to run4.lst_ref.csv 
+1c. Comparing output
+
+Running R-script: test1_execute.R 
+Output from R: 
+  TEST SUCCES: THETA COMPARISON!
+  TEST SUCCES: OMEGA COMPARISON!
+  TEST SUCCES: SIGMA COMPARISON!
+  Overall test result: SUCCESS
+
+Log file: /Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test1_execute/test1_execute.log
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (1/11), failed (0/11), not tested (0/11)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+1
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * folder: examples1
+ * model: run4.mod
+ * reference: run4.lst
+ * nm_version: default
+ * extra_files: 
+ * extra_arguments: 
+ * R_script: execute.R
+ * command_explicit: 
+ * ofv_abs_tol: 1
+ * run_psn: 1
+ * run_test: 1
+ * test_ofv: TRUE
+ * test_parameters: TRUE
+
+1a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test1_execute)
+
+1b. Running command: 'execute  -dir=execute_test_dir -nm_version=default -threads=5 -clean=2 run4.mod > run.log'
+
+Test sumo output: 'sumo run4.lst'
+
+-----------------------------------------------------------------------
+
+run4.lst
+
+Successful minimization                                           [    OK   ]   
+No rounding errors                                                [    OK   ]   
+No zero gradients                                                 [    OK   ]   
+No final zero gradients                                           [    OK   ]   
+Hessian not reset                                                 [    OK   ]   
+Parameter(s) near boundary                                        [ WARNING ]   
+	OMEGA(2,2)             0.00024            0
+Covariance step                                                   [  ERROR  ]   
+
+Correlations                                                      [    OK   ]   
+
+Estimation time for subproblem, sum over $EST (seconds):   0.02
+Covariance time for subproblem, sum over $EST (seconds):   0.01
+
+Objective function value: 104.5610
+
+         THETA                             OMEGA                           SIGMA              
+THETA1    2.77  (........)  OMEGA(1,1)     2.356  (........)  SIGMA(1,1)  0.6229  (........)  
+THETA2  0.0781  (........)  OMEGA(2,1)    0.1436  (........)                                  
+THETA3  0.0363  (........)  OMEGA(2,2)   0.01549  (........)                                  
+                            OMEGA(3,1)  -0.07571  (........)                                  
+                            OMEGA(3,2)    0.8194  (........)                                  
+                            OMEGA(3,3)    0.7176  (........)                                  
+
+The relative standard errors for omega and sigma are reported on the approximate
+standard deviation scale (SE/variance estimate)/2.
+-----------------------------------------------------------------------
+
+Saving sumo output to run4.lst.csv 
+
+Reference sumo output: 'sumo run4.lst.ref'
+
+-----------------------------------------------------------------------
+
+run4.lst.ref
+
+Successful minimization                                           [    OK   ]   
+No rounding errors                                                [    OK   ]   
+No zero gradients                                                 [    OK   ]   
+No final zero gradients                                           [    OK   ]   
+Hessian not reset                                                 [    OK   ]   
+Parameter(s) near boundary                                        [ WARNING ]   
+	OMEGA(2,2)             0.00024            0
+Covariance step                                                   [  ERROR  ]   
+
+Correlations                                                      [    OK   ]   
+
+Total run time for model (hours:min:sec):                  0:00:07
+Estimation time for subproblem, sum over $EST (seconds):   0.06
+Covariance time for subproblem, sum over $EST (seconds):   0.03
+
+Objective function value: 104.5610
+
+         THETA                             OMEGA                           SIGMA              
+THETA1    2.77  (........)  OMEGA(1,1)     2.356  (........)  SIGMA(1,1)  0.6229  (........)  
+THETA2  0.0781  (........)  OMEGA(2,1)    0.1436  (........)                                  
+THETA3  0.0363  (........)  OMEGA(2,2)   0.01549  (........)                                  
+                            OMEGA(3,1)  -0.07571  (........)                                  
+                            OMEGA(3,2)    0.8194  (........)                                  
+                            OMEGA(3,3)    0.7176  (........)                                  
+
+The relative standard errors for omega and sigma are reported on the approximate
+standard deviation scale (SE/variance estimate)/2.
+-----------------------------------------------------------------------
+
+Saving reference sumo output to run4.lst_ref.csv 
+1c. Comparing output
+
+Running R-script: test1_execute.R 
+Output from R: 
+  TEST SUCCES: THETA COMPARISON!
+  TEST SUCCES: OMEGA COMPARISON!
+  TEST SUCCES: SIGMA COMPARISON!
+  Overall test result: SUCCESS
+
+Log file: /Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test1_execute/test1_execute.log
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (1/11), failed (0/11), not tested (0/11)
+-------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+PsN validation tool
+2012-2013, Pirana Software & Consulting BV (RJK)
+------------------------------------------------------------------------------
+
+PsN version: 3.5.3
+
+NONMEM versions installed:
+Valid choices for option -nm_version (see 'psn_options -h nm_version' for details):
+
+default                   (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+7_2                       (/opt/NONMEM/nm72g,7.2,gfortran_unix)
+
+The default is /opt/NONMEM/nm72g,7.2,gfortran_unix
+
+Starting validation tests.
+1
+-------------------------------------------------------------------------------
+Test 1: execute
+-------------------------------------------------------------------------------
+
+Validation settings:
+ * folder: examples1
+ * model: run4.mod
+ * reference: run4.lst
+ * nm_version: default
+ * extra_files: 
+ * extra_arguments: 
+ * R_script: execute.R
+ * command_explicit: 
+ * ofv_abs_tol: 1
+ * run_psn: 1
+ * run_test: 1
+ * test_ofv: TRUE
+ * test_parameters: TRUE
+
+1a. Copying library files to run folder (/Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test1_execute)
+
+1b. Running command: 'execute  -dir=execute_test_dir -nm_version=default -threads=5 -clean=2 run4.mod > run.log'
+
+Test sumo output: 'sumo run4.lst'
+
+-----------------------------------------------------------------------
+
+run4.lst
+
+Successful minimization                                           [    OK   ]   
+No rounding errors                                                [    OK   ]   
+No zero gradients                                                 [    OK   ]   
+No final zero gradients                                           [    OK   ]   
+Hessian not reset                                                 [    OK   ]   
+Parameter(s) near boundary                                        [ WARNING ]   
+	OMEGA(2,2)             0.00024            0
+Covariance step                                                   [  ERROR  ]   
+
+Correlations                                                      [    OK   ]   
+
+Estimation time for subproblem, sum over $EST (seconds):   0.02
+Covariance time for subproblem, sum over $EST (seconds):   0.01
+
+Objective function value: 104.5610
+
+         THETA                             OMEGA                           SIGMA              
+THETA1    2.77  (........)  OMEGA(1,1)     2.356  (........)  SIGMA(1,1)  0.6229  (........)  
+THETA2  0.0781  (........)  OMEGA(2,1)    0.1436  (........)                                  
+THETA3  0.0363  (........)  OMEGA(2,2)   0.01549  (........)                                  
+                            OMEGA(3,1)  -0.07571  (........)                                  
+                            OMEGA(3,2)    0.8194  (........)                                  
+                            OMEGA(3,3)    0.7176  (........)                                  
+
+The relative standard errors for omega and sigma are reported on the approximate
+standard deviation scale (SE/variance estimate)/2.
+-----------------------------------------------------------------------
+
+Saving sumo output to run4.lst.csv 
+
+Reference sumo output: 'sumo run4.lst.ref'
+
+-----------------------------------------------------------------------
+
+run4.lst.ref
+
+Successful minimization                                           [    OK   ]   
+No rounding errors                                                [    OK   ]   
+No zero gradients                                                 [    OK   ]   
+No final zero gradients                                           [    OK   ]   
+Hessian not reset                                                 [    OK   ]   
+Parameter(s) near boundary                                        [ WARNING ]   
+	OMEGA(2,2)             0.00024            0
+Covariance step                                                   [  ERROR  ]   
+
+Correlations                                                      [    OK   ]   
+
+Total run time for model (hours:min:sec):                  0:00:07
+Estimation time for subproblem, sum over $EST (seconds):   0.06
+Covariance time for subproblem, sum over $EST (seconds):   0.03
+
+Objective function value: 104.5610
+
+         THETA                             OMEGA                           SIGMA              
+THETA1    2.77  (........)  OMEGA(1,1)     2.356  (........)  SIGMA(1,1)  0.6229  (........)  
+THETA2  0.0781  (........)  OMEGA(2,1)    0.1436  (........)                                  
+THETA3  0.0363  (........)  OMEGA(2,2)   0.01549  (........)                                  
+                            OMEGA(3,1)  -0.07571  (........)                                  
+                            OMEGA(3,2)    0.8194  (........)                                  
+                            OMEGA(3,3)    0.7176  (........)                                  
+
+The relative standard errors for omega and sigma are reported on the approximate
+standard deviation scale (SE/variance estimate)/2.
+-----------------------------------------------------------------------
+
+Saving reference sumo output to run4.lst_ref.csv 
+1c. Comparing output
+
+Running R-script: test1_execute.R 
+Output from R: 
+  TEST SUCCES: THETA COMPARISON!
+  TEST SUCCES: OMEGA COMPARISON!
+  TEST SUCCES: SIGMA COMPARISON!
+  Overall test result: SUCCESS
+
+Log file: /Users/ronkeizer/valpsn/runs/PsN_3.5.3_20120930/test1_execute/test1_execute.log
+
+
+-------------------------------------------------------------------------------
+Test 2: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 3: execute
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 4: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 5: bootstrap
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 6: vpc
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 7: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 8: llp
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 9: scm
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 10: cdd
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+-------------------------------------------------------------------------------
+Test 11: lasso
+-------------------------------------------------------------------------------
+
+This test was skipped.
+
+
+Validation tests are done.
+
+-------------------------------------------------------------------------------
+Summary: Succes (1/11), failed (0/11), not tested (0/11)
+-------------------------------------------------------------------------------
+

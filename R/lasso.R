@@ -97,8 +97,7 @@ if (files_exist) {
     xp_name <- as.character(tests$xp_name[i])
     if (!is.null(args[[test_name]])) {
       if ((args[[test_name]] == "TRUE")|(args[[test_name]] == "1")) {
-        test_res <-
-          comp(info_t[[xp_name]], info_r[[xp_name]], tol=1)
+        test_res <- comp(info_t[[xp_name]], info_r[[xp_name]], tol=1)
         if (test_res) {
           cat (paste("TEST SUCCESS: ",test_name," COMPARISON\n", sep=""))
         } else {
