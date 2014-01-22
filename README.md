@@ -1,7 +1,7 @@
 PsN-validate
 ============
 
-PsN validation tool. See example ini files in `/ini` for guidance on use.
+PsN validation tool. See doc/Manual.pdf and example ini files in `/ini` for guidance on use.
 
 Start using:
 
